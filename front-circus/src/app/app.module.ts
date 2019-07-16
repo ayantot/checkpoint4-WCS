@@ -25,6 +25,6 @@ import { FormComponent } from './form/form.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent, HomepageComponent]
+  bootstrap: [AppComponent, HomepageComponent, PriceComponent]
 })
 export class AppModule { }
