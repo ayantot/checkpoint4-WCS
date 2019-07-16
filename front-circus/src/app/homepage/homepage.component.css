@@ -6,7 +6,7 @@ body {
 
 a {
     color: #000;
-    font-size: 10%;
+    font-size: 100%;
 }
 
 .band {
@@ -23,7 +23,6 @@ a {
 .header {
     background-color: #fff;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
-    position: fixed;
     width: 100%;
     z-index: 3;
 }
@@ -142,7 +141,6 @@ a {
     }
     .header li a {
         padding: 20px 30px;
-        ;
     }
     .header .menu {
         clear: none;
@@ -152,6 +150,9 @@ a {
     .header .menu-icon {
         display: none;
     }
+    .header ul {
+        margin-left: 30%;
+    }
     .picUp {
         margin-left: 50%;
     }
@@ -159,3 +160,166 @@ a {
         font-size: 80%;
     }
 }
+
+.circus {
+    width: 30%;
+    margin-top: 10%;
+    left: 10%;
+}
+
+.text {
+    margin-left: 50%;
+    margin-top: -15%;
+    width: 40%;
+}
+
+.artist {
+    width: 30%;
+    margin-left: 60%;
+    margin-top: 15%;
+}
+
+.retext {
+    margin-left: 10%;
+    margin-top: -15%;
+    width: 40%;
+}
+
+.text-again {
+    margin-top: 10%;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+video {
+    margin-left: 30%;
+    width: 40%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.github {
+    width: 25%;
+    margin-top: 20%;
+}
+
+footer {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nightsky {
+    width: 100%;
+    background-image: linear-gradient(black, #1a335b, #af39c6);
+}
+
+.star-1 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 25%;
+    top: -10%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-2 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 200px;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-3 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 1000px;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-4 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 850px;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3.0s;
+    animation-iteration-count: infinite;
+}
+
+.star-5 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 400px;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-6 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-7 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 90%;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes twikle {
+    50% {
+        transform: scale(0.25);
+        opacity: 0.1;
+    }
+}
+
+
+/*
+  * Once the star goes to transparent. Teleport to a random area in the sky.
+  */
