@@ -11,5 +11,10 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit() {
   }
+  displayModal:boolean = false;
+
+  selectModal(){
+this.displayModal = !this.displayModal; 
+  }
 
 }
