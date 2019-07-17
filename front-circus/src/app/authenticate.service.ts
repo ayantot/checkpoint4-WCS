@@ -3,6 +3,8 @@ import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators/';
 import { environment } from '../environments/environment';
+import { UserService } from './user.service';
+import { User } from './user';
 import { JWTService } from './jwt.service';
 
 
@@ -30,6 +32,10 @@ export class AuthService {
     const url: string = environment.domain + "login";
     const user: any = { username: p_email, password: p_password };
 
+    console.log(url, user, "coucou");
+
+    debugger;
+    
     return this.service.post(url, user, {headers: this.getHeaders() }).pipe(
       map(
         (obj: any) => {
@@ -40,6 +46,6 @@ export class AuthService {
         }
       )
     );
+    
   }
 }
-

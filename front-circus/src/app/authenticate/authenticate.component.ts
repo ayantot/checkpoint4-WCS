@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../authenticate.service';
 import { User } from '../user';
+import { UserService } from '../user.service';
 
 @Component({
-  selector: 'app-authenticate',
+  selector: 'app-auth',
   templateUrl: './authenticate.component.html',
   styleUrls: ['./authenticate.component.css']
 })
 export class AuthenticateComponent implements OnInit {
+
   public current:User;
 
   constructor( private service:AuthService) { 
