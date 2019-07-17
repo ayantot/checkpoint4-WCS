@@ -1,0 +1,393 @@
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.page {
+    font-family: 'Gloria Hallelujah';
+}
+
+a {
+    color: #000;
+    font-size: 100%;
+}
+
+.band {
+    background-color: black;
+}
+
+.picUp {
+    margin-left: 1%;
+}
+
+
+/* header */
+
+.header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    width: 100%;
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+    .header ul {
+        margin-left: 20%;
+    }
+    .picUp {
+        margin-left: 30%;
+    }
+    h1 {
+        font-size: 80%;
+    }
+}
+
+form {
+    margin-left: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+input {
+    width: 25%;
+}
+
+label {
+    color: white;
+}
+
+textarea {
+    width: 25%;
+}
+
+button {
+    margin-left: 7%;
+}
+
+.form-check-input {
+    margin-left: 2%;
+}
+
+.name {
+    margin-top: -40%;
+    margin-bottom: 50%;
+    margin-left: 57.5%;
+    color: white;
+}
+
+.description {
+    margin-top: -45%;
+    margin-bottom: 30%;
+    margin-left: 47%;
+    color: white;
+    width: 40%;
+}
+
+.me {
+    width: 10%;
+    margin-left: 60%;
+    margin-top: -100%;
+}
+
+.github {
+    margin-top: -15%;
+    width: 5%;
+    margin-left: 15%;
+}
+
+.wild {
+    width: 5%;
+    margin-top: -15%;
+    margin-left: 30%;
+}
+
+.linkedin {
+    width: 5%;
+    margin-top: -15%;
+    margin-left: 25%;
+}
+
+footer {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nightsky {
+    width: 100%;
+    background-image: linear-gradient(#1a335b, black);
+}
+
+.star-1 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 25%;
+    top: -10%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-2 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 200px;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-3 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 1000px;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-4 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 850px;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3.0s;
+    animation-iteration-count: infinite;
+}
+
+.star-5 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 400px;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-6 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-7 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 90%;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes twikle {
+    50% {
+        transform: scale(0.25);
+        opacity: 0.1;
+    }
+}
+
+@media (max-width: 500px) {
+    .description {
+        font-size: 50%;
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+    .name {
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+    .circus {
+        margin-top: 15%;
+    }
+    .github {
+        width: 15%;
+        margin-top: -50%;
+        margin-left: 20%;
+    }
+    .wild {
+        width: 15%;
+        margin-top: -50%;
+        margin-left: 10%;
+    }
+    .linkedin {
+        width: 15%;
+        margin-top: -50%;
+        margin-left: 10%;
+    }
+    .me {
+        margin-top: 10%;
+        width: 40%;
+        margin-left: 30%;
+    }
+    .form-check-input {
+        width: 100%;
+    }
+    input {
+        width: 75%;
+        margin-left: 10%;
+    }
+    textarea {
+        width: 75%;
+        margin-left: 10%;
+    }
+}

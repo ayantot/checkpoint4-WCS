@@ -1,0 +1,453 @@
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.page {
+    font-family: 'Gloria Hallelujah';
+}
+
+a {
+    color: #000;
+    font-size: 100%;
+}
+
+.band {
+    background-color: black;
+}
+
+.picUp {
+    margin-left: 1%;
+}
+
+.subtitles {
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+    font-family: 'Gloria Hallelujah';
+}
+
+.resubtitles {
+    margin-top: 40%;
+    text-align: center;
+    color: white;
+    font-family: 'Gloria Hallelujah';
+}
+
+
+/* header */
+
+.header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    width: 100%;
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+    .header ul {
+        margin-left: 20%;
+    }
+    .picUp {
+        margin-left: 30%;
+    }
+    h1 {
+        font-size: 80%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cm_access_table {
+    line-height: 150%;
+    font-size: 12px;
+    margin: 2% auto;
+    width: 75%;
+    max-width: 900px;
+    padding-top: 10px;
+}
+
+.cm_access_block {
+    width: 100%;
+    color: #fff;
+    background: #000;
+    float: left;
+    list-style-type: none;
+    transition: all 0.25s;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 5px solid #efefef;
+}
+
+.cm_access_table h1 {
+    text-align: center;
+    background: #000;
+    margin: 0;
+    padding: 20px 0 16px;
+    font-weight: 300;
+    font-size: 32px;
+}
+
+.cm_access_price {
+    display: block;
+    background: #000;
+    width: 100%;
+    text-align: center;
+}
+
+.cm_access_price small {
+    font: normal normal 300 12px/12px"Gloria Hallelujah", Helvetica, Arial, sans-serif;
+}
+
+.cm_access_price h1 {
+    font: normal normal 300 42px/20px"Gloria Hallelujah", Helvetica, Arial, sans-serif;
+    margin-top: -12px;
+}
+
+.cm_access_price h1 sup {
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    text-rendering: optimizelegibility;
+    top: -16px;
+    vertical-align: baseline;
+    font: normal normal 300 20px/0px"Gloria Hallelujah", Helvetica, Arial, sans-serif;
+}
+
+.cm_access_price h1 sub {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    text-rendering: optimizelegibility;
+    vertical-align: baseline;
+    font: normal normal 300 12px/0px"Gloria Hallelujah", Helvetica, Arial, sans-serif;
+}
+
+.cm_access_text {
+    width: 80%;
+    margin: 10px auto 10px;
+    color: #ccc;
+    font: normal normal normal 14px/20px"Gloria Hallelujah", Helvetica, Arial, sans-serif;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+    padding: 10px 0;
+}
+
+.cm_access_text strong {
+    color: #fff;
+}
+
+.cm_access_features {
+    background: #000;
+    color: #fff;
+}
+
+.cm_access_features ul {
+    text-align: left;
+    margin: 0px 50px;
+    padding: 0px;
+}
+
+.cm_access_features li {
+    left: 58px;
+    position: relative;
+    width: 70%;
+    padding: 4px 15px 4px 0;
+    font: normal normal 300 14px/18px"Gloria Hallelujah", Helvetica, Arial, sans-serif;
+    list-style-type: square;
+}
+
+.cm_access_footer {
+    padding: 30px 0 20px;
+    background: #000;
+    text-align: center;
+}
+
+@media only screen and (min-width: 900px) {
+    .cm_access_block {
+        width: 33.3%;
+    }
+}
+
+caroussel {
+    position: relative;
+}
+
+.carousel-inner {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-height: 80vh;
+    max-height: 80vh;
+    position: relative;
+}
+
+p {
+    color: white;
+    font-family: 'Gloria Hallelujah';
+    font-size: 150%;
+    margin-bottom: 5%;
+}
+
+footer {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nightsky {
+    width: 100%;
+    background-image: linear-gradient(#1a335b, black);
+}
+
+.star-1 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 25%;
+    top: -10%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-2 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 200px;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-3 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 1000px;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-4 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 850px;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3.0s;
+    animation-iteration-count: infinite;
+}
+
+.star-5 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 400px;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-6 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.star-7 {
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    left: 90%;
+    top: 4%;
+    animation-name: twikle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes twikle {
+    50% {
+        transform: scale(0.25);
+        opacity: 0.1;
+    }
+}
+
+.github {
+    margin-top: -15%;
+    width: 5%;
+    margin-left: 15%;
+}
+
+.wild {
+    width: 5%;
+    margin-top: -15%;
+    margin-left: 30%;
+}
+
+.linkedin {
+    width: 5%;
+    margin-top: -15%;
+    margin-left: 25%;
+}
