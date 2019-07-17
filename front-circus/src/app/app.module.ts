@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,7 @@ import { MediaComponent } from './media/media.component';
 import { ContactComponent } from './contact/contact.component';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { FormComponent } from './form/form.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { FormComponent } from './form/form.component';
     MediaComponent,
     ContactComponent,
     AuthenticateComponent,
-    FormComponent
+    FormComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent, HomepageComponent, PriceComponent]
