@@ -343,7 +343,7 @@ footer {
 }
 
 .box {
-    width: 1200px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 15px;
@@ -379,4 +379,38 @@ footer {
 .card:hover:after {
     transform: rotate(10deg);
     box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+}
+
+@media (max-width: 500px) {
+    p {
+        font-size: 50%;
+    }
+    .circus {
+        margin-top: 15%;
+    }
+    .retext {
+        margin-top: -22%;
+    }
+    .text {
+        margin-top: -20%;
+    }
+    video {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .github {
+        width: 15%;
+        margin-top: -50%;
+        margin-left: 20%;
+    }
+    .wild {
+        width: 15%;
+        margin-top: -50%;
+        margin-left: 10%;
+    }
+    .linkedin {
+        width: 15%;
+        margin-top: -50%;
+        margin-left: 10%;
+    }
 }
